@@ -147,7 +147,7 @@
   </div>
 
   <div class="meta">
-    <div class="meta-row"><span>查验日期</span><span>2026-09-17</span></div>
+    <div class="meta-row"><span>查验日期</span><span id="check-date">以实际访问日期为准</span></div>
     <div class="meta-row"><span>报告年度</span><span>2024年度</span></div>
     <div class="meta-row"><span>委托单位</span><span>浙江帅车品牌管理有限公司</span></div>
     <div class="meta-row"><span>出具机构</span><span>北京中名国成会计师事务所上海分所</span></div>
@@ -155,5 +155,27 @@
 
   <div class="footer-note">本查验结果仅供验证报告真伪参考</div>
 </div>
+<script>
+  // 查验日期按访问当日渲染，固定东八区，避免设备时区不正确导致日历错位
+  (function () {
+    var el = document.getElementById('check-date');
+    if (!el) return;
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var text;
+    try {
+      var parts = new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'Asia/Shanghai',
+        year: 'numeric', month: '2-digit', day: '2-digit'
+      }).formatToParts(new Date());
+      var o = {};
+      parts.forEach(function (p) { o[p.type] = p.value; });
+      text = o.year + '-' + o.month + '-' + o.day;
+    } catch (e) {
+      var d = new Date();
+      text = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+    }
+    el.textContent = text;
+  })();
+</script>
 </body>
 </html>
