@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="robots" content="noindex, nofollow">
+<title>审计报告查验结果</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+    background: linear-gradient(145deg, #f8f9fc 0%, #edf0f7 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 60px rgba(26, 54, 93, 0.12), 0 8px 24px rgba(26, 54, 93, 0.06);
+    position: relative;
+    overflow: hidden;
+  }
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #1a365d, #2d5a8e, #c9a84c);
+  }
+  .seal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 28px;
+    gap: 12px;
+  }
+  .seal-icon {
+    width: 44px;
+    height: 44px;
+    border: 3px solid #c9a84c;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9a84c;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transform: rotate(-15deg);
+  }
+  .seal-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a365d;
+    letter-spacing: 4px;
+  }
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84c, #1a365d, #c9a84c, transparent);
+    margin-bottom: 32px;
+    opacity: 0.5;
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 20px;
+    color: #1a365d;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .result-badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 13px;
+    padding: 4px 18px;
+    border-radius: 20px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  .content {
+    background: #f7f8fc;
+    border-left: 4px solid #1a365d;
+    border-radius: 0 12px 12px 0;
+    padding: 24px 20px;
+    margin-bottom: 28px;
+    line-height: 1.9;
+    font-size: 15px;
+    color: #2d3748;
+  }
+  .content .highlight {
+    color: #1a365d;
+    font-weight: 600;
+  }
+  .meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 12px;
+    color: #a0aec0;
+    padding-top: 20px;
+    border-top: 1px dashed #e2e8f0;
+  }
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .meta-row span:last-child {
+    text-align: right;
+    color: #718096;
+  }
+  .footer-note {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 12px;
+    color: #cbd5e0;
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="seal">
+    <div class="seal-icon">✓</div>
+    <div class="seal-text">查验结果</div>
+  </div>
+  <div class="divider"></div>
+
+  <div class="header">
+    <div class="result-badge">✓ 验证通过</div>
+  </div>
+
+  <div class="content">
+    经查验，此报告为<span class="highlight">浙江帅车品牌管理有限公司</span><span class="highlight">2024年年度审计报告</span>，由<span class="highlight">北京中名国成会计师事务所（特殊普通合伙）上海分所</span>于<span class="highlight">2026年09月16日</span>出具，签字注册会计师为<span class="highlight">刘*、朱*</span>。
+  </div>
+
+  <div class="meta">
+    <div class="meta-row"><span>查验日期</span><span>2026-09-17</span></div>
+    <div class="meta-row"><span>报告年度</span><span>2024年度</span></div>
+    <div class="meta-row"><span>委托单位</span><span>浙江帅车品牌管理有限公司</span></div>
+    <div class="meta-row"><span>出具机构</span><span>北京中名国成会计师事务所上海分所</span></div>
+  </div>
+
+  <div class="footer-note">本查验结果仅供验证报告真伪参考</div>
+</div>
+</body>
+</html>
